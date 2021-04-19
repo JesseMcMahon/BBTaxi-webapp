@@ -3,6 +3,12 @@
   width: 100%;
 }
 
+.office-location {
+  color: #71cdda;
+  font-size: 3rem;
+  z-index: 1000;
+}
+
 .car-icon {
   font-size: 50px;
   z-index: 1000;

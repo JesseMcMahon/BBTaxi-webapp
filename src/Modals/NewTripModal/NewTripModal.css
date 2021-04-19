@@ -56,7 +56,7 @@
   height: 40px;
   background: #333;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
 .create-trip-btn:hover {

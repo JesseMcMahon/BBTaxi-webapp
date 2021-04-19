@@ -1,15 +1,21 @@
 import React from "react"
 import GoogleMapReact from "google-map-react"
 import {AiFillCar} from "react-icons/ai"
+import {HiLocationMarker} from "react-icons/hi"
+import axios from "axios"
 import "./Map.css"
 
 
 const Map = () => {
 
     const APIKEY = "AIzaSyCm0pAbt_pPb9NQ6EM1zX93njP9tUbBbu8"
-    const AnyReactComponent = ({ text }) => <div>{text}</div>;
-    const center = {lat: 39.9946558, lng: -75.1543919}
-    const zoom = 11
+    const center = {lat: 40.204220, lng: -74.010520}
+    const zoom = 15
+
+    // const searchLocation = async () => {
+    //     await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=24%20Sussex%20Drive%20Ottawa%20ON&key=${APIKEY}`)
+    //     .then(res => console.log(res.data.results[0].geometry.location))
+    // }
 
     return (
         <div className="map-container">
@@ -18,34 +24,39 @@ const Map = () => {
           defaultCenter={center}
           defaultZoom={zoom}
         >
+          <HiLocationMarker
+            className="office-location"
+            lat={40.204220}
+            lng={-74.010520}
+          />
           <AiFillCar
           className="car-icon busy"
-            lat={39.965413}
-            lng={-75.337844}
+            lat={40.214220}
+            lng={-74.010520}
           />
 
         <AiFillCar
           className="car-icon available"
-            lat={39.955413}
-            lng={-75.337844}
+            lat={40.209220}
+            lng={-74.010520}
           />
 
         <AiFillCar
           className="car-icon busy"
-            lat={39.975413}
-            lng={-75.336844}
+            lat={40.204220}
+            lng={-74.016520}
           />
 
         <AiFillCar
           className="car-icon available"
-            lat={39.955413}
-            lng={-75.333844}
+            lat={40.204220}
+            lng={-74.018520}
           />
 
         <AiFillCar
           className="car-icon available"
-            lat={39.955413}
-            lng={-75.374844}
+            lat={40.200320}
+            lng={-74.010520}
           />
         </GoogleMapReact>
         </div>
