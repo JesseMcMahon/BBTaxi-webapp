@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import {AiOutlineClose} from "react-icons/ai"
-import {FaBars} from "react-icons/fa"
+import "./NewTripModal.css"
 
 const NewTripModal = () => {
 
@@ -10,11 +10,6 @@ const NewTripModal = () => {
     const [zipCode, setZipCode] = useState('')
     const [customerName, setCustomerName] = useState('')
     const [customerPhone, setCustomerPhone] = useState('')
-
-    const openNewTripModal = () => {
-        const newTripModal = document.getElementById("new-trip")
-        newTripModal.classList.add("display-block")
-    }
     
     const closeNewTripModal = () => {
         const newTripModal = document.getElementById("new-trip")
@@ -29,14 +24,6 @@ const NewTripModal = () => {
 
     return (
 <>
-        <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#newTrip" onClick={openNewTripModal}>New Trip</a>
-                <a href="#contact">New Driver</a>
-                <a href="#about">Logout</a>
-                <FaBars className="min-menu" />
-            </div>
-
         <div id="new-trip" className="new-trip-modal">
         <div className="new-trip-modal-content">
         <AiOutlineClose onClick={closeNewTripModal} className="close-modal" />

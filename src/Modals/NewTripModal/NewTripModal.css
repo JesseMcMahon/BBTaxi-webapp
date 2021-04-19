@@ -1,0 +1,65 @@
+.display-block {
+  display: block !important;
+}
+
+.close-modal {
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: red;
+}
+
+.new-trip-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.new-trip-modal-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 75px auto;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+}
+
+.new-trip-input {
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.create-trip-btn {
+  outline: none;
+  border: 1px solid #333;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 15px;
+  width: 200px;
+  height: 40px;
+  background: #333;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.create-trip-btn:hover {
+  color: #333;
+  background: #fff;
+}
