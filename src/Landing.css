@@ -20,6 +20,7 @@
 
 .login-box {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 25px;
   width: 400px;
   margin: 50px auto;
   height: 370px;

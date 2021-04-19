@@ -31,7 +31,7 @@ function Landing() {
       <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" required />
       </div>
       <div className="submit">
-        <input onClick={(e) => sendLoginRequest(e)} type="submit" value="Submit" />
+        <input onClick={(e) => sendLoginRequest(e)} type="submit" value="Sign In" />
       </div>
     </form>
   </div>
