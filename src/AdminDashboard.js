@@ -21,10 +21,10 @@ const AdminDashboard = () => {
         <div>
 
             <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#newTrip" onClick={openNewTripModal}>New Trip</a>
-                <a href="#contact" onClick={openNewDriverModal}>New Driver</a>
-                <a href="#about">Logout</a>
+                <h3 className="active">Home</h3>
+                <h3 onClick={openNewTripModal}>New Trip</h3>
+                <h3 onClick={openNewDriverModal}>New Driver</h3>
+                <h3>Logout</h3>
                 <FaBars className="min-menu" />
             </div>
             <Map />
