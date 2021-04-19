@@ -3,6 +3,7 @@ import "./AdminDashboard.css"
 import NewTripModal from "./Modals/NewTripModal/NewTripModal.js"
 import NewDriverModal from "./Modals/NewDriverModal/NewDriverModal.js"
 import {FaBars} from "react-icons/fa"
+import Map from "./Map/Map"
 
 const AdminDashboard = () => {
 
@@ -26,6 +27,7 @@ const AdminDashboard = () => {
                 <a href="#about">Logout</a>
                 <FaBars className="min-menu" />
             </div>
+            <Map />
 
             <NewTripModal />
             <NewDriverModal />

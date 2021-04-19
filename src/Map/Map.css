@@ -1,0 +1,17 @@
+.map-container {
+  height: 95vh;
+  width: 100%;
+}
+
+.car-icon {
+  font-size: 50px;
+  z-index: 1000;
+}
+
+.available {
+  color: rgb(6, 141, 13);
+}
+
+.busy {
+  color: rgb(221, 19, 19);
+}
