@@ -2,23 +2,28 @@ import React, { useState } from 'react';
 import './Landing.css';
 import Axios from 'axios'
 
-function Landing() {
+function Landing(props) {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
   const sendLoginRequest = (e) => {
     e.preventDefault()
-
-    //Here is the username and password that needs to be
-    //sent to the api to login.
     const admin = {username, password}
-    Axios.post(admin, 'http://localhost:3001/api/v1/login')
-    .then(resp => console.log(resp))
+    Axios.post('http://localhost:3001/api/v1/login', {admin})
+    .then(resp => {
+      if (resp.data.success) {
+        localStorage.setItem("token", resp.data.jwt)
+        props.handleLogin(resp.data.admin)
+        // redirect()
+      }
+      else {
+        console.log(resp.data.failure)
+      }
+     
+    })
   }
 
-
-  
   return (
     <div className="login-page">
     <h1 className="login-header">Bradley Beach Taxi Service</h1>

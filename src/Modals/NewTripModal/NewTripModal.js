@@ -23,10 +23,10 @@ const NewTripModal = () => {
   
         const searchLocation = async (e) => {
             e.preventDefault()
-            await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress}${city}${state}&key=${APIKEY}`)
-            .then(res => setNewTripCoordinates(res.data.results[0].geometry.location))
-            .then( console.log(streetAddress, city, state, customerName, customerPhone, newTripCoordinates))
-            .then(closeNewTripModal())
+            // await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress}${city}${state}&key=${APIKEY}`)
+            // .then(res => setNewTripCoordinates(res.data.results[0].geometry.location))
+            // .then( console.log(streetAddress, city, state, customerName, customerPhone, newTripCoordinates))
+            // .then(closeNewTripModal())
        
     }
 
