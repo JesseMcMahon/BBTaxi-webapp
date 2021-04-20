@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Landing.css';
+import Axios from 'axios'
 
 function Landing() {
 
@@ -11,7 +12,9 @@ function Landing() {
 
     //Here is the username and password that needs to be
     //sent to the api to login.
-    console.log(username, password)
+    const admin = {username, password}
+    Axios.post(admin, 'http://localhost:3001/api/v1/login')
+    .then(resp => console.log(resp))
   }
 
 
