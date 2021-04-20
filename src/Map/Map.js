@@ -8,7 +8,7 @@ import "./Map.css"
 
 const Map = () => {
 
-    const APIKEY = "AIzaSyCm0pAbt_pPb9NQ6EM1zX93njP9tUbBbu8"
+    
     const center = {lat: 40.204220, lng: -74.010520}
     const zoom = 15
 
