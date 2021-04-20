@@ -5,7 +5,6 @@ import axios from "axios"
 
 const NewTripModal = () => {
 
-    
 
     const [streetAddress, setStreetAddress] = useState('')
     const [city, setCity] = useState('')
