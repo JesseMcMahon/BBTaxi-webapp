@@ -5,7 +5,7 @@ import axios from "axios"
 
 const NewTripModal = () => {
 
-    const APIKEY = "AIzaSyCm0pAbt_pPb9NQ6EM1zX93njP9tUbBbu8"
+    
 
     const [streetAddress, setStreetAddress] = useState('')
     const [city, setCity] = useState('')
