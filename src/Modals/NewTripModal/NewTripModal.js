@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import {AiOutlineClose} from "react-icons/ai"
 import "./NewTripModal.css"
-import axios from "axios"
+import Axios from "axios"
 
 const NewTripModal = () => {
 
@@ -19,13 +19,23 @@ const NewTripModal = () => {
         const clearTripForm = document.getElementById("new-trip-form").reset()
     }
 
+    const sendNewRideRequest = (e) => {
+        e.preventDefault()
+
+        const destination_address = streetAddress + ' ' + city + ' '  + state
+        console.log(destination_address)
+        const location_address = '500 park place ave, Bradley Beach'
+        const ride = {destination_address, location_address}
+        Axios.post('http://localhost:3001/api/v1/requests', ride)
+        .then(resp => console.log(resp))
+    }
   
         const searchLocation = async (e) => {
             e.preventDefault()
-            await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress}${city}${state}&key=${APIKEY}`)
-            .then(res => setNewTripCoordinates(res.data.results[0].geometry.location))
-            .then( console.log(streetAddress, city, state, customerName, customerPhone, newTripCoordinates))
-            .then(closeNewTripModal())
+            // await Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress}${city}${state}&key=${APIKEY}`)
+            // .then(res => setNewTripCoordinates(res.data.results[0].geometry.location))
+            // .then( console.log(streetAddress, city, state, customerName, customerPhone, newTripCoordinates))
+            // .then(closeNewTripModal())
        
     }
 
